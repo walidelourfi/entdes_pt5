@@ -154,7 +154,8 @@ public class GestorTasques {
     public List<Tasca> llistarTasquesPerComplecio(boolean filtreCompletada) {
         List<Tasca> tasquesFiltrades = new ArrayList<>();
         for (Tasca tasca : llistarTasques()) {
-            if (tasca.isCompletada() && filtreCompletada) {
+            //error arreglat && canvi a ==
+            if (tasca.isCompletada() == filtreCompletada) {
                 tasquesFiltrades.add(tasca);
             }
         }
